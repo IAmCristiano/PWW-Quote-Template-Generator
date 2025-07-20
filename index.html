@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>PWW Quote Template Generator</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1>PWW Quote Template Generator</h1>
+  <div class="controls">
+    <label for="bgImage">Upload background image:</label>
+    <input type="file" id="bgImage" accept="image/*" />
+
+    <label for="quoteImage">Upload speaker image (optional):</label>
+    <input type="file" id="quoteImage" accept="image/*" />
+
+    <label for="logoPosition">Choose logo position:</label>
+    <select id="logoPosition">
+      <option value="left">Top Left</option>
+      <option value="right" selected>Top Right</option>
+    </select>
+
+    <label for="caption">Enter caption text:</label>
+    <textarea id="caption" rows="4" placeholder="Enter your quote here..."></textarea>
+
+    <label for="speakerName">Enter speaker name (optional):</label>
+    <input type="text" id="speakerName" placeholder="e.g. - Seth Rollins" />
+
+    <label for="sourceText">Enter source (optional):</label>
+    <input type="text" id="sourceText" placeholder="e.g. - Insight with Chris Van Vliet" />
+
+    <button onclick="generateTemplate()">Generate Template</button>
+    <button onclick="downloadImage()">Download Image</button>
+  </div>
+
+  <canvas id="templateCanvas"></canvas>
+
+  <script src="script.js"></script>
+</body>
+</html>
