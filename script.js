@@ -88,7 +88,7 @@ function generateTemplate() {
   function downloadImage() {
     const canvas = document.getElementById('templateCanvas');
     const link = document.createElement('a');
-    link.download = 'wrestling_template.png';
+    link.download = 'PWW_template.png';
     link.href = canvas.toDataURL();
     link.click();
   }
